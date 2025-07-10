@@ -8,7 +8,6 @@
   </PropertyGroup>
   
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
-    <PublishTrimmed>true</PublishTrimmed>
     <CompressionEnabled>true</CompressionEnabled>
     <BlazorWebAssemblyEnableAOT>true</BlazorWebAssemblyEnableAOT>
   </PropertyGroup>
