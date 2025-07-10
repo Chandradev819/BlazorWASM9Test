@@ -23,7 +23,7 @@ jobs:
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.x' # Adjust based on your Blazor project version
+          dotnet-version: '8.x'
 
       - name: Install WASM Tools workload
         run: dotnet workload install wasm-tools
@@ -38,10 +38,9 @@ jobs:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_POLITE_BEACH_00B77D510 }}
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
-          app_location: "Client" # Point to project root
+          app_location: "Client"
           api_location: "Api"
-          output_location: "Client/wwwroot" # Where publish output goes
-
+          output_location: "Client/wwwroot"
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
